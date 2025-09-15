@@ -1,46 +1,41 @@
 # 💄 Rouge Mystique - Unveil Your Mystery  
 
-Rouge Mystique is a premium luxury cosmetics web project that combines **elegant design, interactive features, and gamification** to deliver an engaging experience for users. The website showcases a **lipstick collection**, allows users to explore **virtual try-on**, and includes a fun **Lipstick Catcher Game** for entertainment.  
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#)  
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](#)  
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](#)  
+[![MIT License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](#)  
+
+✨ **Rouge Mystique** is a premium **luxury cosmetics website** that blends **elegant design, interactivity, and gamification**. Explore our **lipstick collection**, try shades with **Virtual Try-On**, and enjoy our fun **Lipstick Catcher Game** 🎮.  
+
+🔗 **Live Website**: 👉 [View Rouge Mystique](https://your-username.github.io/rouge-mystique/)  
 
 ---
 
-## ✨ Features  
+## 🌟 Features  
 
-### 🌐 Website Sections  
-- **Hero Section**: Brand introduction with sparkling animations.  
-- **Lipstick Catcher Game**: An interactive canvas-based game where users catch lipsticks to earn points.  
-- **Signature Collection**: Product showcase with swatches, add-to-cart, and wishlist options.  
-- **Virtual Try-On**: Users can preview lipsticks on a digital face model.  
-- **Features Section**: Highlights brand quality, ethics, and unique offerings.  
-- **Shopping Cart**: Add/remove products, view total, and checkout.  
-- **Footer**: Includes quick links, customer care, social media, and payment options.  
+### 🖌️ Website Highlights  
+- **Hero Section**: Brand intro with animated sparkles ✨  
+- **Lipstick Catcher Game** 🎮: Canvas-based fun challenge  
+- **Product Showcase**: Premium lipsticks with swatches, wishlist, and add-to-cart  
+- **Virtual Try-On** 👄: Preview lipsticks on a digital face model  
+- **Shopping Cart** 🛒: Manage your orders in real-time  
+- **Responsive Design** 📱💻  
 
-### 🎮 Game (Lipstick Catcher)  
-- Move basket with `← →` or `A D` keys.  
-- Catch **lipsticks (💄)** for points.  
-- Avoid other beauty products (lose a life).  
-- Levels increase difficulty (speed & obstacles).  
-
-### 🛍️ Products  
-- Premium lipstick shades with **dynamic swatch colors**.  
-- Add to **wishlist ❤️** or **cart 🛒**.  
-- Virtual try-on preview for each product.  
-
-### 💎 Brand Values  
-- **Premium Quality** – Long-lasting, hydrating formula.  
-- **Exclusive Shades** – For all occasions.  
-- **Ethical Beauty** – Cruelty-free & sustainable packaging.  
-- **Perfect Gifts** – Luxury presentation for celebrations.  
+### 🎮 Lipstick Catcher Game  
+- Move basket with `← →` or `A D` keys  
+- Catch **💄 Lipsticks** = +10 points  
+- Avoid ❌ other products (lose life)  
+- Levels = more speed & obstacles ⚡  
 
 ---
 
 ## 🛠️ Tech Stack  
 
 - **Frontend**: HTML5, CSS3, JavaScript  
-- **Canvas API**: Lipstick Catcher game  
-- **UI Enhancements**: Animations, gradients, icons, emojis  
-- **Responsive Design**: Works across devices  
+- **Game Engine**: Canvas API  
+- **UI/UX**: Animations, gradients, emojis, responsive layout  
 
 ---
 
+## 📂 Project Structure  
 
