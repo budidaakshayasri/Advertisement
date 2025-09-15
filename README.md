@@ -7,7 +7,7 @@
 
 ✨ **Rouge Mystique** is a premium **luxury cosmetics website** that blends **elegant design, interactivity, and gamification**. Explore our **lipstick collection**, try shades with **Virtual Try-On**, and enjoy our fun **Lipstick Catcher Game** 🎮.  
 
-🔗 **Live Website**: 👉 [View Rouge Mystique](https://your-username.github.io/rouge-mystique/)  
+🔗 **Live Website**: 👉 [View Rouge Mystique]([https://your-username.github.io/rouge-mystique/](https://budidaakshayasri.github.io/Advertisement/))  
 
 ---
 
@@ -36,6 +36,5 @@
 - **UI/UX**: Animations, gradients, emojis, responsive layout  
 
 ---
-
-## 📂 Project Structure  
+ 
 
