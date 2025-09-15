@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rouge Mystique - Unveil Your Mystery</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Rouge Mystique</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#game">Lipstick Catcher</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="mobile-nav" id="mobileNav">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#game">Lipstick Catcher</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Rouge Mystique</h1>
+            <p>Unveil the mystery of your beauty. Our luxurious lipstick collection empowers you to express your unique essence with colors that captivate and formulas that enchant.</p>
+            <a href="#products" class="cta-button">Discover Your Shade</a>
+            <a href="#game" class="cta-button game-button">Play Lipstick Catcher</a>
+        </div>
+        <div class="hero-visual">
+            <div class="lipstick-container">
+                <div class="lipstick"></div>
+                <div class="sparkle" style="top: 50px; left: -30px; font-size: 20px;">✨</div>
+                <div class="sparkle" style="top: 150px; right: -40px; font-size: 25px; animation-delay: 0.5s;">⭐</div>
+                <div class="sparkle" style="bottom: 100px; left: -20px; font-size: 18px; animation-delay: 1s;">💫</div>
+                <div class="sparkle" style="bottom: 200px; right: -35px; font-size: 22px; animation-delay: 1.5s;">✨</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Section -->
+    <section class="game-section" id="game">
+        <div class="game-container">
+            <h2 class="game-title">Lipstick Catcher</h2>
+            <p class="game-subtitle">Catch the falling lipsticks while avoiding other beauty products! Move with arrow keys or WASD.</p>
+            
+            <div class="game-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="score">0</div>
+                    <div class="stat-label">Score</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="lives">3</div>
+                    <div class="stat-label">Lives</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="level">1</div>
+                    <div class="stat-label">Level</div>
+                </div>
+            </div>
+
+            <div class="game-canvas-container">
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+                <div class="game-over-screen" id="gameOverScreen">
+                    <h3 class="game-over-title">Game Over!</h3>
+                    <p id="finalScore">Final Score: 0</p>
+                    <button class="game-btn start-btn" onclick="restartGame()">Play Again</button>
+                </div>
+            </div>
+
+            <div class="game-controls">
+                <button class="game-btn start-btn" id="startBtn" onclick="startGame()">Start Game</button>
+                <button class="game-btn pause-btn" id="pauseBtn" onclick="pauseGame()" style="display: none;">Pause</button>
+            </div>
+
+            <div class="game-instructions">
+                <h4>How to Play:</h4>
+                <div class="instruction-box">
+                    <p>• Move your basket left and right using <kbd>←</kbd> <kbd>→</kbd> arrow keys or <kbd>A</kbd> <kbd>D</kbd> keys</p>
+                </div>
+                <div class="instruction-box">
+                    <p>• Catch the falling lipsticks to earn points <span class="lipstick-emoji">💄</span> = <span class="points">10 points</span></p>
+                </div>
+                <div class="instruction-box">
+                    <p>• Avoid other beauty products that will cost you a life</p>
+                </div>
+                <div class="instruction-box">
+                    <p>• Each level increases speed and adds more obstacles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2>Why Choose Rouge Mystique?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">💄</div>
+                <h3>Premium Quality</h3>
+                <p>12-hour long-lasting wear • Weightless comfort • Rich pigmentation • Hydrating formula • Transfer-resistant</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌟</div>
+                <h3>Exclusive Shades</h3>
+                <p>Perfect for every occasion • Professional elegance • Evening glamour • Daily confidence • Special events</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔮</div>
+                <h3>Complete Experience</h3>
+                <p>Interactive games • Virtual try-on • Beauty tutorials • Personalized recommendations • VIP membership</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Ethical Beauty</h3>
+                <p>Cruelty-free • Sustainable packaging • Clean ingredients • Inclusive shades • Community support</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💝</div>
+                <h3>Perfect Gifts</h3>
+                <p>Birthdays • Anniversaries • Graduations • Holidays • Self-care treats • Luxury packaging included</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>Who It's For</h3>
+                <p>Modern professionals • Beauty lovers • Confident women • Gift givers • Anyone seeking luxury</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="showcase" id="products">
+        <h2>Signature Collection</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9;">Premium lipsticks for every mood and moment</p>
+        <div class="product-grid">
+            <div class="product-card fade-in-up" data-product="crimson-enigma">
+                <button class="wishlist-btn" onclick="toggleWishlist('crimson-enigma')">♡</button>
+                <div class="product-color virtual-tryon" style="background: linear-gradient(45deg, #8b2635, #c44569);" onclick="openVirtualTryOn('crimson-enigma')"></div>
+                <h3>Crimson Enigma</h3>
+                <p>Perfect for: Business meetings, power lunches, confident presentations</p>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #8b2635;" onclick="changeColor('crimson-enigma', '#8b2635')"></div>
+                    <div class="color-swatch" style="background: #c44569;" onclick="changeColor('crimson-enigma', '#c44569')"></div>
+                    <div class="color-swatch" style="background: #a52a2a;" onclick="changeColor('crimson-enigma', '#a52a2a')"></div>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('crimson-enigma')">Add to Cart - ₹2,499</button>
+            </div>
+            <div class="product-card fade-in-up" data-product="rose-mirage">
+                <button class="wishlist-btn" onclick="toggleWishlist('rose-mirage')">♡</button>
+                <div class="product-color virtual-tryon" style="background: linear-gradient(45deg, #ff6b9d, #ffd93d);" onclick="openVirtualTryOn('rose-mirage')"></div>
+                <h3>Rose Mirage</h3>
+                <p>Perfect for: Date nights, brunches, everyday elegance</p>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #ff6b9d;" onclick="changeColor('rose-mirage', '#ff6b9d')"></div>
+                    <div class="color-swatch" style="background: #ffd93d;" onclick="changeColor('rose-mirage', '#ffd93d')"></div>
+                    <div class="color-swatch" style="background: #ffb6c1;" onclick="changeColor('rose-mirage', '#ffb6c1')"></div>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('rose-mirage')">Add to Cart - ₹2,499</button>
+            </div>
+            <div class="product-card fade-in-up" data-product="velvet-shadow">
+                <button class="wishlist-btn" onclick="toggleWishlist('velvet-shadow')">♡</button>
+                <div class="product-color virtual-tryon" style="background: linear-gradient(45deg, #5d4e75, #8b7355);" onclick="openVirtualTryOn('velvet-shadow')"></div>
+                <h3>Velvet Shadow</h3>
+                <p>Perfect for: Evening events, sophisticated dinners, formal occasions</p>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #5d4e75;" onclick="changeColor('velvet-shadow', '#5d4e75')"></div>
+                    <div class="color-swatch" style="background: #8b7355;" onclick="changeColor('velvet-shadow', '#8b7355')"></div>
+                    <div class="color-swatch" style="background: #4b0082;" onclick="changeColor('velvet-shadow', '#4b0082')"></div>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('velvet-shadow')">Add to Cart - ₹2,499</button>
+            </div>
+            <div class="product-card fade-in-up" data-product="sunset-spell">
+                <button class="wishlist-btn" onclick="toggleWishlist('sunset-spell')">♡</button>
+                <div class="product-color virtual-tryon" style="background: linear-gradient(45deg, #ff4757, #ff6b9d);" onclick="openVirtualTryOn('sunset-spell')"></div>
+                <h3>Sunset Spell</h3>
+                <p>Perfect for: Weekend fun, beach days, summer parties</p>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #ff4757;" onclick="changeColor('sunset-spell', '#ff4757')"></div>
+                    <div class="color-swatch" style="background: #ff6b9d;" onclick="changeColor('sunset-spell', '#ff6b9d')"></div>
+                    <div class="color-swatch" style="background: #ffa502;" onclick="changeColor('sunset-spell', '#ffa502')"></div>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('sunset-spell')">Add to Cart - ₹2,499</button>
+            </div>
+            <div class="product-card fade-in-up" data-product="plum-elegance">
+                <button class="wishlist-btn" onclick="toggleWishlist('plum-elegance')">♡</button>
+                <div class="product-color virtual-tryon" style="background: linear-gradient(45deg, #8B008B, #4B0082);" onclick="openVirtualTryOn('plum-elegance')"></div>
+                <h3>Plum Elegance</h3>
+                <p>Perfect for: Weddings, galas, special celebrations</p>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #8B008B;" onclick="changeColor('plum-elegance', '#8B008B')"></div>
+                    <div class="color-swatch" style="background: #4B0082;" onclick="changeColor('plum-elegance', '#4B0082')"></div>
+                    <div class="color-swatch" style="background: #9932cc;" onclick="changeColor('plum-elegance', '#9932cc')"></div>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('plum-elegance')">Add to Cart - ₹2,499</button>
+            </div>
+            <div class="product-card fade-in-up" data-product="pink-velvet">
+                <button class="wishlist-btn" onclick="toggleWishlist('pink-velvet')">♡</button>
+                <div class="product-color virtual-tryon" style="background: linear-gradient(45deg, #FFB6C1, #DB7093);" onclick="openVirtualTryOn('pink-velvet')"></div>
+                <h3>Pink Velvet</h3>
+                <p>Perfect for: Coffee dates, casual outings, fresh looks</p>
+                <div class="color-swatches">
+                    <div class="color-swatch" style="background: #FFB6C1;" onclick="changeColor('pink-velvet', '#FFB6C1')"></div>
+                    <div class="color-swatch" style="background: #DB7093;" onclick="changeColor('pink-velvet', '#DB7093')"></div>
+                    <div class="color-swatch" style="background: #ffc0cb;" onclick="changeColor('pink-velvet', '#ffc0cb')"></div>
+                </div>
+                <button class="add-to-cart" onclick="addToCart('pink-velvet')">Add to Cart - ₹2,499</button>
+            </div>
+        </div>
+        
+        <div style="margin-top: 50px; padding: 30px; background: rgba(255, 255, 255, 0.1); border-radius: 20px; backdrop-filter: blur(10px);">
+            <h3 style="margin-bottom: 20px; color: #ffd93d;">Why Rouge Mystique?</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: left;">
+                <div>
+                    <h4>✨ Quality Promise</h4>
+                    <p>12-hour wear, weightless feel, rich color payoff</p>
+                </div>
+                <div>
+                    <h4>🎯 Perfect For</h4>
+                    <p>Working women, beauty lovers, confident individuals</p>
+                </div>
+                <div>
+                    <h4>💝 Great Gifts</h4>
+                    <p>Birthdays, anniversaries, self-care, celebrations</p>
+                </div>
+                <div>
+                    <h4>🌍 Ethical Choice</h4>
+                    <p>Cruelty-free, clean ingredients, sustainable</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Icon -->
+    <div class="cart-icon" onclick="openCart()">
+        🛒
+        <div class="cart-count" id="cartCount">0</div>
+    </div>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCart()">&times;</span>
+            <h2>Your Shopping Cart</h2>
+            <div id="cartItems"></div>
+            <div class="cart-total">
+                <h3>Total: ₹<span id="cartTotal">0</span></h3>
+                <button class="cta-button" onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Virtual Try-On Modal -->
+    <div id="tryOnModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTryOn()">&times;</span>
+            <h2>Virtual Try-On</h2>
+            <div class="try-on-container">
+                <div class="face-preview">
+                    <div class="lips" id="lipsPreview"></div>
+                </div>
+                <div class="color-picker">
+                    <h3>Choose Your Shade</h3>
+                    <div id="colorOptions"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <h3>Rouge Mystique</h3>
+                        <p class="brand-tagline">Unveil Your Mystery</p>
+                        <p class="brand-description">Premium luxury cosmetics crafted with passion and precision. Experience the magic of beauty with our exclusive lipstick collection.</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#game">Lipstick Catcher</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Track Your Order</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#" title="Instagram" class="social-link">📷 Instagram</a>
+                        <a href="#" title="Facebook" class="social-link">📘 Facebook</a>
+                        <a href="#" title="Twitter" class="social-link">🐦 Twitter</a>
+                        <a href="#" title="YouTube" class="social-link">📺 YouTube</a>
+                       
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2024 <strong>Budid Akshayasri</strong>. All rights reserved.</p>
+                        <p>Rouge Mystique - Premium Luxury Cosmetics</p>
+                    </div>
+                    <div class="footer-legal">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+                <div class="payment-methods">
+                    <p>We Accept:</p>
+                    <div class="payment-icons">
+                        <span>💳</span>
+                        <span>🏦</span>
+                        <span>📱</span>
+                        <span>💰</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
