@@ -43,5 +43,4 @@ Rouge Mystique is a premium luxury cosmetics web project that combines **elegant
 
 ---
 
-## 📂 Project Structure  
 
